@@ -64,7 +64,7 @@
                      </div>
 
                      <div class="col-md-4 status">
-                        <h5>$1,280</h5>
+                        <h5 id="total-price">$1,280</h5>
                         <h5>$0</h5>
                         <h5>$1,278</h5>
                      </div>
@@ -123,6 +123,16 @@
             })
 
             // summation amount 
+
+            function calculateTotal(){
+               const phoneInput = document.getElementById("phone-count");
+               const phoneCount = parseInt(phoneInput.value);
+
+               const caseInput = document.getElementById("case-count");
+               const caseCount = parseInt(caseInput.value);
+
+               const totalPrice = phoneCount * 1280 + caseCount * 75 ;
+            }  document.getElementById("total-price").innerText = '$' + totalPrice;
 
 
          
